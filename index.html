@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selection Sort Visualization</title>
+  </head>
+  <style>
+    h1 {
+      text-align: center;
+      color: aliceblue;
+    }
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: blanchedalmond;
+    }
+    .wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      font-size: 18px;
+      font-family: sans-serif;
+      font-weight: 700;
+    }
+    .bar {
+      width: 20px;
+      height: 100px; 
+      background-color: #f00;
+      margin-bottom: 5px;
+      transition: height 0.5s ease-in-out; 
+    }
+    .sorted {
+      background-color: #0f0;
+    }
+    #content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+  <body style="background-color: #3d3b40">
+    <h1>Selection Sort Visualization</h1>
+    <div class="container" id="barContainer">
+      <div class="wrapper">
+        <span>[</span>
+        <div id="content"></div>
+        <span>]</span>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
