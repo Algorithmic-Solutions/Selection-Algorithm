@@ -8,8 +8,6 @@ function selectionSort(arr) {
       if (arr[j] < arr[minIndex]) {
         minIndex = j;
       }
-      // Count comparisons during inner loop (for exact number calculation)
-      comparisons++;
     }
 
     // Swap the element at the current index with the minimum element if necessary
@@ -20,13 +18,24 @@ function selectionSort(arr) {
 
   return arr;
 }
-function Visualization(array) {
-  let content = document.getElementById("content");
+let content = document.getElementById("content");
+function Visualization(number) {
+    let displayedNumbers = content.innerHTML ? content.innerHTML + ", " : ""; // Check if content exists and add comma if needed
+    displayedNumbers = number; // Add the new number
+  
+    content.innerHTML = displayedNumbers; // Update content with the entire string
+  }
+const input = document.querySelector("input");
+input.addEventListener("input", (e) => {
+  const value = e.target.value;
+  if (isNaN(value)) {
+    alert("Please enter a valid number!");
+    reset();
+  }
+  Visualization(value);
+});
+function reset() {
   content.innerHTML = "";
-  const result = selectionSort(array.slice());
-  content.innerHTML += result;
-  content.innerHTML += ",";
+  input.value = "";
 }
-let comparisons = 0;
-const unsortedArray = [64, 25, 12, 22, 11];
-Visualization(unsortedArray.slice());
+document.querySelector("button").addEventListener("click", reset);
