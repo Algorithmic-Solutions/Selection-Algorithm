@@ -1,0 +1,24 @@
+{
+  "name": "selection-algorithm",
+  "version": "1.0.0",
+  "description": "This repository demonstrates the Selection Sort algorithm using JavaScript and HTML. The code sorts an array of numbers in ascending order and visually represents the sorting process.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Algorithmic-Solutions/Selection-Algorithm.git"
+  },
+  "keywords": [
+    "selection-algorithm",
+    "algrithms",
+    "algorithm"
+  ],
+  "author": "Mahdi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Algorithmic-Solutions/Selection-Algorithm/issues"
+  },
+  "homepage": "https://github.com/Algorithmic-Solutions/Selection-Algorithm#readme"
+}
