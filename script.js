@@ -19,12 +19,16 @@ function selectionSort(arr) {
   return arr;
 }
 let content = document.getElementById("content");
-function Visualization(number) {
-    let displayedNumbers = content.innerHTML ? content.innerHTML + ", " : ""; // Check if content exists and add comma if needed
-    displayedNumbers = number; // Add the new number
-  
-    content.innerHTML = displayedNumbers; // Update content with the entire string
+function Visualization(array) {
+  let displayedNumbers = "";
+
+  for (let i = 0; i < array.length; i++) {
+    displayedNumbers += (i > 0 ? ", " : "") + array[i].toString();
   }
+
+  content.innerHTML = displayedNumbers;
+}
+
 const input = document.querySelector("input");
 input.addEventListener("input", (e) => {
   const value = e.target.value;
@@ -38,4 +42,4 @@ function reset() {
   content.innerHTML = "";
   input.value = "";
 }
-document.querySelector("button").addEventListener("click", reset);
+document.querySelector("#reset").addEventListener("click", reset);
