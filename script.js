@@ -23,7 +23,7 @@ function Visualization(array) {
   let displayedNumbers = "";
 
   for (let i = 0; i < array.length; i++) {
-    displayedNumbers += (i > 0 ? ", " : "") + array[i].toString();
+    displayedNumbers += (i > 0 ? ", " : " ") + array[i].toString();
   }
 
   content.innerHTML = displayedNumbers;
@@ -34,7 +34,7 @@ input.addEventListener("input", (e) => {
   const value = e.target.value;
   if (isNaN(value)) {
     alert("Please enter a valid number!");
-    reset();
+    return reset();
   }
   Visualization(value);
 });
