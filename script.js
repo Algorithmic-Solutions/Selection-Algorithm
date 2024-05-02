@@ -16,20 +16,7 @@ function selectionSort(arr) {
       [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
     }
   }
-  animateSort(arr);
   return arr;
-}
-function animateSort(sortedArray) {
-  const elements = content.querySelectorAll("span"); // Get all elements
-
-  for (let i = 1; i < elements.length; i++) {
-    // Skip the first bracket
-    if (elements[i].textContent !== sortedArray[i - 1]) {
-      // Check if position changed
-      elements[i].style.transform = "translateX(0)"; // Remove offset
-      elements[i].style.opacity = 1; // Full visibility
-    }
-  }
 }
 function Visualization(value) {
   const numbersArray = value.split(",");

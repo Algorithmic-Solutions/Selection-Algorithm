@@ -86,6 +86,15 @@
       transform: translateX(100px); /* Initial offset for animation */
       opacity: 0; /* Initial opacity for fade-in effect */
     }
+    #content span {
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out; /* Animation duration and easing */
+  margin-right: 5px; /* Add space between elements */
+  display: inline-block; /* Allow side-by-side display */
+}
+
+#content span.highlight {
+  color: red; /* Highlight comparison elements */
+}
   </style>
   <body style="background-color: #3d3b40">
     <div class="container">
